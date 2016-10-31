@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import { getApi, getProxyApi } from 'src/common/api'
+import { getApi } from 'src/common/api'
 
 export default {
   mounted () {
-    console.log(getProxyApi())
+    console.log(getApi())
     fetch(getApi().startImage).then((data) => {
       console.log(data)
     })
