@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div id="app">
     <router-view></router-view>
+    <img :src="'http://104.251.231.206:3000/?target='+startImage.img" :alt="startImage.text">
   </div>
 </template>
 
@@ -8,10 +9,19 @@
 import { getApi } from 'src/common/api'
 
 export default {
+  data () {
+    return {
+      startImage: {
+        text: '',
+        img: ''
+      }
+    }
+  },
   mounted () {
-    console.log(getApi())
     fetch(getApi().startImage).then((data) => {
-      console.log(data)
+      return data.json()
+    }).then((data) => {
+      this.startImage = data
     })
   }
 }
