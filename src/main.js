@@ -6,14 +6,11 @@ import store from './store'
 import App from './App'
 // import style file
 import 'assets/styles/typo.css'
+import 'assets/styles/animate.scss'
 /* eslint-disable no-new */
 
-const vm = new Vue({
+new Vue({
   router,
   store,
   ...App
-})
-
-vm.$mount('#app')
-
-export default vm
+}).$mount('#app')
