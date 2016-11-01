@@ -2,6 +2,7 @@ require('es6-promise').polyfill()
 import Vue from 'vue'
 import Vuex from 'vuex'
 import hello from './modules/hello'
+import bootimage from './modules/bootimage'
 import * as actions from './actions'
 import * as getters from './getters'
 
@@ -13,7 +14,8 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {
-    hello
+    hello,
+    bootimage
   },
   strict: debug
 })

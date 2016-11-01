@@ -18,15 +18,11 @@
 </template>
 
 <script>
-import { getApi } from 'src/common/api'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   data () {
     return {
-      startImage: {
-        text: '',
-        img: ''
-      },
       show: {
         bgimg: false,
         text: false,
@@ -35,16 +31,26 @@ export default {
       }
     }
   },
-  created () {
-    fetch(getApi().startImage).then((data) => {
-      return data.json()
-    }).then((data) => {
-      this.startImage = data
+  computed: {
+    ...mapGetters({
+      startImage: 'bootimage'
+    })
+  },
+  watch: {
+    'startImage.img': function () {
       this.show.bgimg = true
       this.show.text = true
       this.show.enterbtn = true
       this.show.loading = false
+    }
+  },
+  methods: {
+    ...mapActions({
+      'getBootImage': 'getBootImage'
     })
+  },
+  created () {
+    this.getBootImage()
   }
 }
 </script>
