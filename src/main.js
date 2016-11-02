@@ -7,6 +7,7 @@ import App from './App'
 // import style file
 import 'assets/styles/typo.css'
 import 'assets/styles/animate.scss'
+import 'assets/styles/grid.scss'
 /* eslint-disable no-new */
 
 new Vue({

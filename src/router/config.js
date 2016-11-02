@@ -1,10 +1,10 @@
-const Hello = r => require.ensure([], () => r(require('components/Hello.vue')), 'hello')
-const BootPage = r => require.ensure([], () => r(require('src/pages/BootPage.vue')), 'boot')
+const BootPage = r => require.ensure([], () => r(require('pages/BootPage.vue')), 'boot')
+const Home = r => require.ensure([], () => r(require('pages/Home.vue')), 'home')
 
 export default [
   {
-    path: '/hello',
-    component: Hello
+    path: '/home',
+    component: Home
   },
   {
     path: '/boot',

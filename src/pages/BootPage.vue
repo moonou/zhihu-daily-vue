@@ -10,7 +10,7 @@
     </div>
     <div class="content">
       <transition name="start-btn">
-        <button class="btn" v-if="show.enterbtn">查看知乎日报</button>
+        <router-link to="/home" class="btn" v-if="show.enterbtn" tag="button">查看知乎日报</router-link>
       </transition>
     </div>
     <div class="mask" v-if="show.loading">加载中...</div>
@@ -38,19 +38,25 @@ export default {
   },
   watch: {
     'startImage.img': function () {
+      this.startAnimate()
+    }
+  },
+  methods: {
+    ...mapActions({
+      'getBootImage': 'getBootImage'
+    }),
+    startAnimate () {
       this.show.bgimg = true
       this.show.text = true
       this.show.enterbtn = true
       this.show.loading = false
     }
   },
-  methods: {
-    ...mapActions({
-      'getBootImage': 'getBootImage'
-    })
-  },
   created () {
     this.getBootImage()
+    if (this.startImage.img !== '') {
+      this.startAnimate()
+    }
   }
 }
 </script>
