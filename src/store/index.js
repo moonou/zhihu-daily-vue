@@ -1,4 +1,5 @@
 require('es6-promise').polyfill()
+import 'whatwg-fetch'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import hello from './modules/hello'
