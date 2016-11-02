@@ -9,10 +9,10 @@ module.exports = {
     const devServer = browser.globals.devServerURL
 
     browser
-      .url(devServer)
+      .url(devServer+'/#/boot')
       .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.hello')
-      .assert.containsText('h1', 'Hello world')
+      .assert.elementPresent('.start_image')
+      .waitForElementVisible('.start_image img', 5000)
       .assert.elementCount('img', 1)
       .end()
   }
