@@ -8,3 +8,12 @@ export const getBootImage = ({commit}) => {
     commit(types.GETBOOTIMAGE, data)
   })
 }
+
+export const getNewsByDate = ({commit}, date) => {
+  let url = getApi().news.before + date
+  fetch(url).then((data) => {
+    return data.json()
+  }).then((data) => {
+    commit(types.UPDATENEWS, data)
+  })
+}
