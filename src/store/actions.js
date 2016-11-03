@@ -17,3 +17,11 @@ export const getNewsByDate = ({commit}, date) => {
     commit(types.UPDATENEWS, data)
   })
 }
+
+export const getThemes = ({commit}) => {
+  fetch(getApi().themes.list).then((data) => {
+    return data.json()
+  }).then((data) => {
+    commit(types.UPDATETHEMES, data)
+  })
+}

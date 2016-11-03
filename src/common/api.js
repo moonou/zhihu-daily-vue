@@ -11,6 +11,10 @@ let config = {
   news: {
     before: '/news/before/',
     latest: '/news/latest'
+  },
+  themes: {
+    list: '/themes',
+    content: '/theme/:id'
   }
 }
 

@@ -1,5 +1,6 @@
 const BootPage = r => require.ensure([], () => r(require('pages/BootPage.vue')), 'boot')
 const Home = r => require.ensure([], () => r(require('pages/Home.vue')), 'home')
+const Play = r => require.ensure([], () => r(require('pages/Play.vue')), 'play')
 
 export default [
   {
@@ -9,6 +10,10 @@ export default [
   {
     path: '/boot',
     component: BootPage
+  },
+  {
+    path: '/play',
+    component: Play
   },
   {
     path: '/',

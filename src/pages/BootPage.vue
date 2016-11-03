@@ -93,7 +93,7 @@ export default {
       background: none;
       border: solid 1px #ddd;
       color: #fff;
-      padding: 0px 20px;
+      padding: 5px 20px;
       border-radius: 4px;
       transform: translateY(60px);
       transition: all .6s ease-out;

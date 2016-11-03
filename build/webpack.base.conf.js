@@ -12,7 +12,6 @@ var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 
 module.exports = {
   entry: {
-    'whatwg-fetch': 'whatwg-fetch',
     app: './src/main.js'
   },
   output: {

@@ -8,15 +8,7 @@
             <a href="">主题日报</a>
           </div>
           <div class="body">
-            <ul v-for="_news in news">
-              <li class="date"> {{ _news.date }} </li>
-              <li v-for="newsitem in _news.stories" class="newsitem">
-                <div class="title">{{ newsitem.title }}</div>
-                <div class="image">
-                  <img :src="proxyserver + newsitem.images[0]" alt="">
-                </div>
-              </li>
-            </ul>
+            <news-list></news-list>
           </div>
         </div>
       </div>
@@ -26,26 +18,12 @@
 </template>
 
 <script>
-import { proxyserver } from 'src/common/api'
-import { mapActions, mapGetters } from 'vuex'
-import moment from 'moment'
+import NewsList from 'src/components/NewsList'
 
 export default {
-  data () {
-    return {
-      proxyserver: proxyserver
-    }
-  },
-  methods: {
-    ...mapActions({
-      updatenews: 'getNewsByDate'
-    })
-  },
-  computed: {
-    ...mapGetters(['news'])
-  },
-  created () {
-    this.updatenews(moment().format('YYYYMMDD'))
+  name: 'home_page',
+  components: {
+    NewsList
   }
 }
 </script>
@@ -72,20 +50,21 @@ export default {
         overflow: hidden;
         box-shadow: 1px 1px 10px -2px #bdbdbd;
         .header {
-          background: #015668;
-          height: 10%;
+          background: #9fccd6;
+          height: 7%;
           box-shadow: 1px 1px 1px 1px #ddd;
           display: flex;
           justify-content: center;
           align-items: flex-end;
           a {
             color: #fff;
-            font-size: 17px;
+            font-size: 14px;
             margin: 0 10px;
             text-decoration: none;
             transition: text-shadow .5s;
+            cursor: pointer;
             &.active, &:hover{
-              text-shadow: 0px 0px 13px #f1f1f1;
+              text-shadow: 0px 0px 13px #000;
             }
           }
         }
@@ -94,35 +73,9 @@ export default {
           background: #fff;
           overflow-y: scroll;
           padding: 5px 0 0 5px;
-          ul {
-            .date {
-              text-align: center;
-              background: #e3e3e3;
-              font-size: 14px;
-              color: #797979;
-              padding: 5px 0;
-              border-radius: 2px;
-            }
-            .newsitem {
-              border-bottom: solid 1px #ddd;
-              padding: 5px 0 0 0;
-              display: flex;
-              .title {
-                flex: 0 0 (3/4);
-              }
-              .image {
-                flex: 0 0 (1/4);
-                width: 0;
-                min-width: 20px;
-                img {
-                  width: 100%;
-                }
-              }
-            }
-          }
           &:hover {
             &::-webkit-scrollbar-thumb{
-              background: rgba(222,222,222,0.7);
+              background: rgba(100,100,100,1);
             }
           }
           &::-webkit-scrollbar {
