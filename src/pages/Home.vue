@@ -8,7 +8,8 @@
             <a href="">主题日报</a>
           </div>
           <div class="body">
-            <news-list></news-list>
+            <component v-bind:is="activeView">
+            </component>
           </div>
         </div>
       </div>
@@ -19,11 +20,18 @@
 
 <script>
 import NewsList from 'src/components/NewsList'
+import ThemeList from 'src/components/ThemeList'
 
 export default {
   name: 'home_page',
   components: {
-    NewsList
+    NewsList,
+    ThemeList
+  },
+  data () {
+    return {
+      activeView: 'ThemeList'
+    }
   }
 }
 </script>
@@ -51,7 +59,7 @@ export default {
         box-shadow: 1px 1px 10px -2px #bdbdbd;
         .header {
           background: #9fccd6;
-          height: 7%;
+          height: 12%;
           box-shadow: 1px 1px 1px 1px #ddd;
           display: flex;
           justify-content: center;
@@ -69,7 +77,7 @@ export default {
           }
         }
         .body {
-          height: 90%;
+          height: 88%;
           background: #fff;
           overflow-y: scroll;
           padding: 5px 0 0 5px;
