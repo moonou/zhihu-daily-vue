@@ -14,7 +14,7 @@ let config = {
   },
   themes: {
     list: '/themes',
-    content: '/theme/:id'
+    content: '/theme'
   }
 }
 

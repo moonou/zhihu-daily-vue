@@ -4,16 +4,20 @@
       <div class="list">
         <div class="artcles">
           <div class="header">
-            <a href="">每日阅读</a>
-            <a href="">主题日报</a>
+            <a :class="[{active: activeView === 'NewsList'}]" @click="activeView = 'NewsList'">每日阅读</a>
+            <a :class="[{active: activeView === 'ThemeList'}]" @click="activeView = 'ThemeList'">主题日报</a>
           </div>
           <div class="body">
-            <component v-bind:is="activeView">
-            </component>
+            <transition name="fade">
+              <component v-bind:is="activeView">
+              </component>
+            </transition>
           </div>
         </div>
       </div>
-      <div class="banner">轮播</div>
+      <div class="banner">
+        <banner></banner>
+      </div>
     </div>
   </div>
 </template>
@@ -21,16 +25,18 @@
 <script>
 import NewsList from 'src/components/NewsList'
 import ThemeList from 'src/components/ThemeList'
+import Banner from 'src/components/Banner'
 
 export default {
   name: 'home_page',
   components: {
     NewsList,
-    ThemeList
+    ThemeList,
+    Banner
   },
   data () {
     return {
-      activeView: 'ThemeList'
+      activeView: 'NewsList'
     }
   }
 }
@@ -59,15 +65,15 @@ export default {
         box-shadow: 1px 1px 10px -2px #bdbdbd;
         .header {
           background: #9fccd6;
-          height: 12%;
+          height: 10%;
           box-shadow: 1px 1px 1px 1px #ddd;
           display: flex;
           justify-content: center;
-          align-items: flex-end;
+          align-items: center;
           a {
             color: #fff;
             font-size: 14px;
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
             transition: text-shadow .5s;
             cursor: pointer;
@@ -77,7 +83,7 @@ export default {
           }
         }
         .body {
-          height: 88%;
+          height: 90%;
           background: #fff;
           overflow-y: scroll;
           padding: 5px 0 0 5px;
@@ -105,7 +111,9 @@ export default {
 
     }
     .banner {
-      @include column(2/3)
+      @include column(2/3);
+      margin-top: 100px;
+      height: 70%;
     }
   }
 }

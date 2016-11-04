@@ -15,7 +15,7 @@
 <script>
 import { proxyserver } from 'src/common/api'
 import { mapActions, mapGetters } from 'vuex'
-import moment from 'moment'
+// import moment from 'moment'
 
 export default {
   data () {
@@ -25,14 +25,16 @@ export default {
   },
   methods: {
     ...mapActions({
-      updatenews: 'getNewsByDate'
+      updatenews: 'getNewsByDate',
+      updatenewslatest: 'getNews'
     })
   },
   computed: {
     ...mapGetters(['news'])
   },
   created () {
-    this.updatenews(moment().format('YYYYMMDD'))
+    this.updatenewslatest()
+    // this.updatenews(moment().format('YYYYMMDD'))
   }
 }
 </script>
@@ -54,6 +56,10 @@ export default {
       border-bottom: solid 1px #ddd;
       padding: 5px 0 0 0;
       display: flex;
+      cursor: pointer;
+      &:hover {
+        background-color: #f5f5f5;
+      }
       .title {
         flex: 0 0 (3/4)*100+%;
         display: flex;

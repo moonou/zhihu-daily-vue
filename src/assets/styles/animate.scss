@@ -36,3 +36,35 @@
   // opacity: 1;
   transition: all 3s ease-out 3s !important ;
 }
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: all .3s ease;
+}
+.fade-leave {
+  transition: all .3s ease;
+}
+.fade-leave-active {
+  opacity: 0;
+}
+
+.banner-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.banner-enter-active {
+  /*z-index: 1;*/
+  transition: all .6s ease-out;
+}
+.banner-leave {
+  transform: translateX(0);
+}
+.banner-leave-active {
+  /*z-index: 0;*/
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all .6s ease-in;
+}
+
