@@ -4,12 +4,12 @@
       <div class="list">
         <div class="artcles">
           <div class="header">
-            <a :class="[{active: activeView === 'NewsList'}]" @click="activeView = 'NewsList'">每日阅读</a>
-            <a :class="[{active: activeView === 'ThemeList'}]" @click="activeView = 'ThemeList'">主题日报</a>
+            <a :class="[{active: activeView === 'NewsList'}]" @click="changeView('NewsList', 'left')">每日阅读</a>
+            <a :class="[{active: activeView === 'ThemeList'}]" @click="changeView('ThemeList', 'right')">主题日报</a>
           </div>
           <div class="body">
-            <transition name="fade">
-              <component v-bind:is="activeView">
+            <transition :name="list_animation">
+              <component v-bind:is="activeView" class="view">
               </component>
             </transition>
           </div>
@@ -36,7 +36,14 @@ export default {
   },
   data () {
     return {
-      activeView: 'NewsList'
+      activeView: 'NewsList',
+      list_animation: 'fade-side-left'
+    }
+  },
+  methods: {
+    changeView (viewname, direction) {
+      this.list_animation = 'fade-side-' + direction
+      this.activeView = viewname
     }
   }
 }
@@ -87,6 +94,11 @@ export default {
           background: #fff;
           overflow-y: scroll;
           padding: 5px 0 0 5px;
+          position: relative;
+          .view {
+            position: absolute;
+            top: 5px;
+          }
           &:hover {
             &::-webkit-scrollbar-thumb{
               background: rgba(100,100,100,1);

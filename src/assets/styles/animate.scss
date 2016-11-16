@@ -68,3 +68,34 @@
   transition: all .6s ease-in;
 }
 
+.fade-side-left-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-side-left-enter-active {
+  transition: all .6s ease;
+}
+.fade-side-left-leave {
+  opacity: 1;
+}
+.fade-side-left-leave-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all .6s ease;
+}
+
+.fade-side-right-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-side-right-enter-active {
+  transition: all .6s ease;
+}
+.fade-side-right-leave {
+  opacity: 1;
+}
+.fade-side-right-leave-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all .6s ease;
+}
