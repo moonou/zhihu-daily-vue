@@ -4,10 +4,17 @@
       <div v-if="news[0]">
         <transition name="banner">
           <div class="panel" v-for="(story, index) in news[0].top_stories" v-if="activeindex === index+1">
-            <img :src="proxyserver + story.image" alt="">
-            <div class="mask">
-              <div class="title">{{ story.title }}</div>
-            </div>
+            <router-link :to="{
+              name: 'content',
+              params: {
+                id: story.id
+              }
+            }">
+              <img :src="proxyserver + story.image" alt="">
+              <div class="mask">
+                <div class="title">{{ story.title }}</div>
+              </div>
+            </router-link>
           </div>
         </transition>
       </div>

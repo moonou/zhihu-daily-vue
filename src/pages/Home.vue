@@ -43,7 +43,6 @@ export default {
   },
   mounted () {
     particlesJS.load('points', '/static/points.json', () => {
-      console.log('callback - particles.js config loaded')
     })
   },
   methods: {
@@ -65,6 +64,7 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   #points {
     position: absolute;
     top: 0;

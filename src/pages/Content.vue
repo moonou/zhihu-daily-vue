@@ -11,7 +11,8 @@
       </div>
     </div>
     <div class="backpanel">
-      <img :src="proxyserver + data.image" alt="">
+      <img :src="proxyserver + data.image" v-if="data.image" alt="">
+      <img :src="proxyserver + data.images[0]" v-else v-if="data.images" alt="">
       <div class="imagecopy">背景图来源：{{ data.image_source }}</div>
     </div>
     <div class="page" @scroll="scroll($event)">
@@ -48,7 +49,7 @@ export default {
     fetch(`${getApi().news.content}/${this.newsid}`).then((data) => {
       return data.json()
     }).then((data) => {
-      if (data.theme) {
+      if (data.type === 1) {
         this.$router.push({
           name: 'theme',
           params: {

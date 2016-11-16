@@ -11,6 +11,12 @@
         <div class="right">
           <ul class="list">
             <li v-for="story in data.stories">
+              <router-link :to="{
+                name: 'content',
+                params: {
+                  id: story.id
+                }
+              }">
               <div class="item"  v-if="story.images">
                 <div class="text">
                   <div class="title">{{ story.title }}</div>
@@ -22,6 +28,7 @@
               <div class="item_title" v-else>
                 <div class="title">{{ story.title }}</div>
               </div>
+              </router-link>
             </li>
           </ul>
         </div>
