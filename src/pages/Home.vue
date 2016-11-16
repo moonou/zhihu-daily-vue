@@ -19,6 +19,7 @@
         <banner></banner>
       </div>
     </div>
+    <div id="points"></div>
   </div>
 </template>
 
@@ -40,6 +41,11 @@ export default {
       list_animation: 'fade-side-left'
     }
   },
+  mounted () {
+    particlesJS.load('points', '/static/points.json', () => {
+      console.log('callback - particles.js config loaded')
+    })
+  },
   methods: {
     changeView (viewname, direction) {
       this.list_animation = 'fade-side-' + direction
@@ -59,8 +65,16 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
+  #points {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
   .container {
     height: 100%;
+    z-index: 1;
     .list {
       @include column(1/3)
       height: 70%;
@@ -71,7 +85,7 @@ export default {
         overflow: hidden;
         box-shadow: 1px 1px 10px -2px #bdbdbd;
         .header {
-          background: #9fccd6;
+          background: #07617D;
           height: 10%;
           box-shadow: 1px 1px 1px 1px #ddd;
           display: flex;
@@ -85,7 +99,7 @@ export default {
             transition: text-shadow .5s;
             cursor: pointer;
             &.active, &:hover{
-              text-shadow: 0px 0px 13px #000;
+              text-shadow: 0px 0px 13px #eee;
             }
           }
         }
