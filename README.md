@@ -5,7 +5,7 @@
 
 # 简介 Describe
 
-![zhihu](//odujw1uur.qnssl.com/zhihu.png)
+![zhihu](http://odujw1uur.qnssl.com/zhihu.png)
 
 本项目是基于Vue.js2.0开发的PWA网页应用，使用的基本框架有`vuex`、`vue-router`、`fetch`
 项目使用的接口来之[izzyleung](https://github.com/izzyleung)整理的接口[地址](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
