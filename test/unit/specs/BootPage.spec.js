@@ -20,7 +20,7 @@ describe('BootPage', function () {
           expect(vm.$el.querySelector('.start_image .text')).to.be.ok
         })
         it('should have a true another', () => {
-          expect(vm.$el.querySelector('.start_image .text').textContent).to.equal('摄影：' + store.state.bootimage.text)
+          expect(vm.$el.querySelector('.start_image .text').textContent).to.equal('图片来源：' + store.state.bootimage.text)
         })
       })
       done()
