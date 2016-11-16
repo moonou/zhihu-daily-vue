@@ -87,8 +87,14 @@ export default {
         }
         .mask {
           position: absolute;
-          bottom: 30%;
-          left: 4%;
+          top: 10%;
+          left: 0%;
+          padding:5px 20px;
+          width: 100%;
+          box-sizing: border-box;
+          background: rgba(0, 0, 0, .6);
+          border-top: solid 1px #ddd;
+          border-bottom: solid 1px #ddd;
           .title {
             font-size: 20px;
             color: #fff;
