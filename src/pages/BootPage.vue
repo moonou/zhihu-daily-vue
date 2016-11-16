@@ -5,7 +5,7 @@
     </transition>
     <div class="mask">
       <transition name="start-text">
-        <div v-if="show.text" class="text">摄影：{{ startImage.text }}</div>
+        <div v-if="show.text" class="text">图片来源：{{ startImage.text }}</div>
       </transition>
     </div>
     <div class="content">

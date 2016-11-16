@@ -82,6 +82,7 @@ export default {
         position: absolute;
         top: 0;
         width: 100%;
+        height: 100%;
         cursor: pointer;
         img {
           transition: all .4s ease-out;
