@@ -3,10 +3,17 @@
    <ul v-for="_news in news">
      <li class="date"> {{ _news.date }} </li>
      <li v-for="newsitem in _news.stories" class="newsitem">
-       <div class="title">{{ newsitem.title }}</div>
-       <div class="image">
-         <img :src="proxyserver + newsitem.images[0]" alt="">
-       </div>
+       <router-link :to="{
+         name: 'content',
+         params: {
+           id: newsitem.id
+         }
+       }">
+        <div class="title">{{ newsitem.title }}</div>
+        <div class="image">
+          <img :src="proxyserver + newsitem.images[0]" alt="">
+        </div>
+       </router-link>
     </li>
    </ul>
    <button class="more" @click="loadnext">加载更早的新闻</button>
@@ -61,8 +68,10 @@ export default {
     .newsitem {
       border-bottom: solid 1px #ddd;
       padding: 5px 0 0 0;
-      display: flex;
       cursor: pointer;
+      >a {
+        display: flex;
+      }
       &:hover {
         background-color: #f5f5f5;
       }

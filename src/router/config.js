@@ -1,12 +1,14 @@
 const BootPage = r => require.ensure([], () => r(require('pages/BootPage.vue')), 'boot')
 const Home = r => require.ensure([], () => r(require('pages/Home.vue')), 'home')
-const Theme = r => require.ensure([], () => r(require('pages/Theme.vue')), 'home')
+const Theme = r => require.ensure([], () => r(require('pages/Theme.vue')), 'theme')
+const Content = r => require.ensure([], () => r(require('pages/Content.vue')), 'content')
 const Play = r => require.ensure([], () => r(require('pages/Play.vue')), 'play')
 
 export default [
   {
     path: '/home',
-    component: Home
+    component: Home,
+    name: 'home'
   },
   {
     path: '/boot',
@@ -20,6 +22,11 @@ export default [
     path: '/theme/:id',
     component: Theme,
     name: 'theme'
+  },
+  {
+    path: '/content/:id',
+    component: Content,
+    name: 'content'
   },
   {
     path: '/',

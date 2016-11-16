@@ -10,7 +10,8 @@ let config = {
   startImage: '/start-image/1080*1776',
   news: {
     before: '/news/before/',
-    latest: '/news/latest'
+    latest: '/news/latest',
+    content: '/news'
   },
   themes: {
     list: '/themes',
