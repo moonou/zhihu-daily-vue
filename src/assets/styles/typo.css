@@ -124,14 +124,7 @@ sub {
   bottom: -0.25em;
 }
 
-/* 让链接在 hover 状态下显示下划线 */
-a {
-  color: #1abc9c;
-}
 
-a:hover {
-  text-decoration: underline;
-}
 
 .typo a {
   border-bottom: 1px solid #1abc9c;

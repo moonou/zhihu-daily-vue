@@ -2,15 +2,22 @@
   <div class="themes">
     <ul>
       <li v-for="theme in themes.others">
-        <div class="theme_item">
-          <div class="left">
-            <div class="name">{{theme.name}}</div>
-            <div class="description">{{theme.description}}</div>
+        <router-link :to="{
+          name: 'theme',
+          params: {
+            id: theme.id
+          }
+        }">
+          <div class="theme_item">
+            <div class="left">
+              <div class="name">{{theme.name}}</div>
+              <div class="description">{{theme.description}}</div>
+            </div>
+            <div class="image">
+              <img :src="proxyserver+theme.thumbnail" alt="">
+            </div>
           </div>
-          <div class="image">
-            <img :src="proxyserver+theme.thumbnail" alt="">
-          </div>
-        </div>
+        </router-link>
       </li>
     </ul>
   </div>

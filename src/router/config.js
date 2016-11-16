@@ -17,8 +17,9 @@ export default [
     component: Play
   },
   {
-    path: '/theme',
-    component: Theme
+    path: '/theme/:id',
+    component: Theme,
+    name: 'theme'
   },
   {
     path: '/',

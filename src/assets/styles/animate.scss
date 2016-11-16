@@ -46,10 +46,11 @@
     transition: all .3s ease;
   }
   .fade-leave {
-    transition: all .3s ease;
+    opacity: 1;
   }
   .fade-leave-active {
     opacity: 0;
+    transition: all .3s ease;
   }
 
 // banner aimation
