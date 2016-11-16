@@ -9,25 +9,31 @@
        </div>
     </li>
    </ul>
+   <button class="more" @click="loadnext">加载更早的新闻</button>
   </div>
 </template>
 
 <script>
 import { proxyserver } from 'src/common/api'
 import { mapActions, mapGetters } from 'vuex'
-// import moment from 'moment'
+import moment from 'moment'
 
 export default {
   data () {
     return {
-      proxyserver: proxyserver
+      proxyserver: proxyserver,
+      dayindex: 0
     }
   },
   methods: {
     ...mapActions({
       updatenews: 'getNewsByDate',
       updatenewslatest: 'getNews'
-    })
+    }),
+    loadnext () {
+      this.updatenews(moment().subtract(this.dayindex, 'days').format('YYYYMMDD'))
+      this.dayindex++
+    }
   },
   computed: {
     ...mapGetters(['news'])
@@ -76,6 +82,19 @@ export default {
           border-radius: 2px;
         }
       }
+    }
+  }
+  .more {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #fff;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #eee;
     }
   }
 }

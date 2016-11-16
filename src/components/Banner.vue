@@ -37,7 +37,6 @@ export default {
       clearInterval(interv)
     }
     interv = setInterval(() => {
-      console.log('int')
       if (this.news[0]) {
         let newslength = this.news[0].top_stories.length
         if (newslength > 0) {
