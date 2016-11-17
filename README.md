@@ -7,7 +7,7 @@
 
 ![zhihupc](https://odujw1uur.qnssl.com/zhihupc.png)
 
-<p style="text-align: center;">
+<p align="center">
   <a href="https://camo.githubusercontent.com/ed59ad60e52b0e8725eb31af731802440538876e/68747470733a2f2f6f64756a77317575722e716e73736c2e636f6d2f7a686968756d6f62692e706e67" target="_blank">
     <img src="https://camo.githubusercontent.com/ed59ad60e52b0e8725eb31af731802440538876e/68747470733a2f2f6f64756a77317575722e716e73736c2e636f6d2f7a686968756d6f62692e706e67" alt="zhihumobi" data-canonical-src="https://odujw1uur.qnssl.com/zhihumobi.png" style="max-width:100%;">
   </a>
