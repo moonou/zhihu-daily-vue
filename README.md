@@ -7,7 +7,11 @@
 
 ![zhihupc](https://odujw1uur.qnssl.com/zhihupc.png)
 
-![zhihumobi](https://odujw1uur.qnssl.com/zhihumobi.png)
+<p style="text-align: center;">
+  <a href="https://camo.githubusercontent.com/ed59ad60e52b0e8725eb31af731802440538876e/68747470733a2f2f6f64756a77317575722e716e73736c2e636f6d2f7a686968756d6f62692e706e67" target="_blank">
+    <img src="https://camo.githubusercontent.com/ed59ad60e52b0e8725eb31af731802440538876e/68747470733a2f2f6f64756a77317575722e716e73736c2e636f6d2f7a686968756d6f62692e706e67" alt="zhihumobi" data-canonical-src="https://odujw1uur.qnssl.com/zhihumobi.png" style="max-width:100%;">
+  </a>
+</p>
 
 本项目是基于Vue.js2.0开发的PWA网页应用，使用的基本框架有`vuex`、`vue-router`、`fetch`
 项目使用的接口来之[izzyleung](https://github.com/izzyleung)整理的接口[地址](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
