@@ -205,7 +205,7 @@ export default {
   .content_page {
     .page {
       .content {
-        width: 90%;
+        width: 95%;
         margin: 200px auto 50px auto;
       }
     }

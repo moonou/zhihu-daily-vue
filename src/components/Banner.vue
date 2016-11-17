@@ -72,7 +72,7 @@ export default {
     height: 100%;
     .content {
       background-color: #fff;
-      width: 80%;
+      width: 100%;
       margin: 0 0 0 auto;
       height: 100%;
       border-radius: 4px;

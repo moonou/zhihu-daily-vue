@@ -21,6 +21,7 @@ module.exports = {
   },
   'globals': {
     'fetch': true,
-    'particlesJS': true
+    'particlesJS': true,
+    'NProgress': true
   }
 }

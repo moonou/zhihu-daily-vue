@@ -183,7 +183,7 @@ export default {
 @media screen and (max-width: 767px) {
   .theme_container {
     >.panel {
-      width: 90%;
+      width: 95%;
       height: 100%;
       margin: 60px 0 20px 0;
       overflow: scroll;

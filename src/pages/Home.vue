@@ -148,6 +148,7 @@ export default {
   .home {
     .container {
       overflow: scroll;
+      padding: 0 10px;
       .list {
         @include column(1/1);
         margin-top: 20px;
