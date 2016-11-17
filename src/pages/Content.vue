@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     fixImageUrl (data) {
-      return data.replace(/src="http:/g, `src="${proxyserver}http:`)
+      return data.replace(/src="http/g, `src="${proxyserver}http`)
     },
     scroll (e) {
       var top = e.target.scrollTop
@@ -156,6 +156,7 @@ export default {
       border-radius: 4px;
       border: solid 1px #eee;
       transition: box-shadow .6s ease-out, transform .3s ease-out;
+      margin-bottom: 50px;
       &:hover {
         box-shadow: 6px 6px 15px -1px #ccc;
         transform: translateY(-2px);
