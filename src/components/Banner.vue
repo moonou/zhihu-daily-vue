@@ -87,10 +87,14 @@ export default {
         cursor: pointer;
         img {
           transition: all .4s ease-out;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%) scale(1);
         }
         &:hover {
           img {
-            transform: scale(1.2);
+            transform: translateY(-50%) translateX(-50%) scale(1.1);
           }
         }
         .mask {
