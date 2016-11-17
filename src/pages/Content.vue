@@ -129,6 +129,7 @@ export default {
     height: 100%;
     top: 0;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     &:hover {
       &::-webkit-scrollbar-thumb{
         background: rgba(100,100,100,1);
@@ -155,11 +156,6 @@ export default {
       box-shadow: 4px 4px 10px -1px #ddd;
       border-radius: 4px;
       border: solid 1px #eee;
-      transition: box-shadow .6s ease-out, transform .3s ease-out;
-      &:hover {
-        box-shadow: 6px 6px 15px -1px #ccc;
-        transform: translateY(-2px);
-      }
       .title {
         box-sizing: border-box;
         padding: 20px 10px;
