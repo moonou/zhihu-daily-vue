@@ -151,12 +151,11 @@ export default {
     .content {
       width: 60%;
       background-color: #fff;
-      margin: 400px auto 0 auto;
+      margin: 400px auto 50px auto;
       box-shadow: 4px 4px 10px -1px #ddd;
       border-radius: 4px;
       border: solid 1px #eee;
       transition: box-shadow .6s ease-out, transform .3s ease-out;
-      margin-bottom: 50px;
       &:hover {
         box-shadow: 6px 6px 15px -1px #ccc;
         transform: translateY(-2px);
@@ -194,6 +193,22 @@ export default {
       border:solid 1px #eee;
       border-radius: 4px;
       box-shadow: 2px 2px 20px -2px #ccc;
+  }
+}
+@media screen and (max-width: 767px) {
+  .backpanel {
+    height: 50vh;
+  }
+  .header {
+    padding:10px 20px;
+  }
+  .content_page {
+    .page {
+      .content {
+        width: 90%;
+        margin: 200px auto 50px auto;
+      }
+    }
   }
 }
 </style>

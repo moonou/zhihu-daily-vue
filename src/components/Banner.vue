@@ -67,6 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
   .banner_component {
     height: 100%;
     .content {
@@ -133,4 +134,11 @@ export default {
       }
     }
   }
+@media screen and (max-width: 767px) {
+  .banner_component {
+    .content {
+      width: 100%;
+    }
+  }
+}
 </style>

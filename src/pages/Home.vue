@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <div class="container">
+      <div class="banner">
+        <banner></banner>
+      </div>
       <div class="list">
         <div class="artcles">
           <div class="header">
@@ -14,9 +17,6 @@
             </transition>
           </div>
         </div>
-      </div>
-      <div class="banner">
-        <banner></banner>
       </div>
     </div>
     <div id="points"></div>
@@ -144,5 +144,21 @@ export default {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .home {
+    .container {
+      overflow: scroll;
+      .list {
+        @include column(1/1);
+        margin-top: 20px;
+      }
+      .banner {
+        @include column(1/1);
+        height: 50%;
+        margin-top: 20px;
+      }
+    }
+  }
+}
 
 </style>

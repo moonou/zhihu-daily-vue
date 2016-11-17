@@ -180,4 +180,24 @@ export default {
     }
   }
 }
+@media screen and (max-width: 767px) {
+  .theme_container {
+    >.panel {
+      width: 90%;
+      height: 100%;
+      margin: 60px 0 20px 0;
+      overflow: scroll;
+      flex-wrap: wrap;
+      box-shadow: 2px 2px 10px -1px #999;
+      background-color: #fff;
+      >.left {
+        flex: 0 0 100%;
+        height: 200px;
+      }
+      >.right {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
 </style>
