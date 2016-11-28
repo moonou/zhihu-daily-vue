@@ -1,7 +1,7 @@
 <template>
   <div class="start_image">
     <transition name="start-image">
-      <img v-if="show.bgimg" :src="'http://104.251.231.206:3000/?target='+startImage.img" :alt="startImage.text">
+      <img v-if="show.bgimg" :src="proxyserver+startImage.img" :alt="startImage.text">
     </transition>
     <div class="mask">
       <transition name="start-text">

@@ -10,6 +10,16 @@ import 'assets/styles/animate.scss'
 import 'assets/styles/grid.scss'
 /* eslint-disable no-new */
 
+import { proxyserver } from 'src/common/api'
+
+Vue.mixin({
+  data () {
+    return {
+      proxyserver: proxyserver
+    }
+  }
+})
+
 new Vue({
   router,
   store,
