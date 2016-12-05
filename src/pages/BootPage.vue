@@ -86,6 +86,7 @@ export default {
     .text {
       font-size: 30px;
       color: #fff;
+      text-shadow: 0px 0px 5px #666;
     }
   }
   .content {
@@ -98,6 +99,7 @@ export default {
       transform: translateY(60px);
       transition: all .6s ease-out;
       outline: none;
+      text-shadow: 0px 0px 5px #666;
       &:hover {
         background-color: rgba(255, 255, 255, 0.55);
         cursor: pointer;
