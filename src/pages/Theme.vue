@@ -111,6 +111,7 @@ export default {
       flex: 0 0 65%;
       background-color: #f3f3f3;
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       &:hover {
         &::-webkit-scrollbar-thumb{
           background: rgba(100,100,100,1);

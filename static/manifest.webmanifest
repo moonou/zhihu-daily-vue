@@ -1,0 +1,14 @@
+{
+  "name": "知乎日报.vue",
+  "short_name": "知乎日报.vue",
+  "start_url": "/boot",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/static/icon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
