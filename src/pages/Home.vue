@@ -107,6 +107,7 @@ export default {
           height: 90%;
           background: #fff;
           overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
           padding: 5px 0 0 5px;
           position: relative;
           .view {

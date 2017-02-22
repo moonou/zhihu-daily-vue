@@ -188,6 +188,7 @@ export default {
       height: 100%;
       margin: 60px 0 20px 0;
       overflow: scroll;
+      -webkit-overflow-scrolling: touch;
       flex-wrap: wrap;
       box-shadow: 2px 2px 10px -1px #999;
       background-color: #fff;
