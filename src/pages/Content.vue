@@ -1,7 +1,7 @@
 <template>
   <div>
   <div v-if="data" class="content_page">
-    <div class="header" :style="{ background: 'rgba(7, 97, 125, ' + headop + ')'}">
+    <div :class="['header',{'active': headop === 1}]" :style="{ background: 'rgba(7, 97, 125, ' + headop + ')'}">
       <div class="home">
         <router-link :to="{
           name: 'home'
@@ -12,7 +12,7 @@
     </div>
     <div class="backpanel">
       <img :src="proxyserver + data.image" v-if="data.image" alt="">
-      <img :src="proxyserver + data.images[0]" v-else v-if="data.images" alt="">
+      <img :src="proxyserver + data.images[0]" v-if="data.images" alt="">
       <div class="imagecopy">背景图来源：{{ data.image_source }}</div>
     </div>
     <div class="page" @scroll="scroll($event)">
@@ -34,6 +34,7 @@
 import { getApi, proxyserver } from 'src/common/api'
 
 export default {
+  name: 'Content',
   data () {
     return {
       newsid: 4772126,
@@ -109,6 +110,9 @@ export default {
   z-index: 2;
   width: 100%;
   transition: background .6s ease-out;
+  &.active {
+    box-shadow: 0px 2px 22px -1px #424242;
+  }
   .home {
     i {
       transition: all .1s ease-out;

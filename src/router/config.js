@@ -54,6 +54,6 @@ export default [
   },
   {
     path: '/',
-    redirect: '/boot'
+    redirect: '/home'
   }
 ]
