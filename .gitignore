@@ -7,3 +7,4 @@ test/e2e/reports
 selenium-debug.log
 yarn.lock
 .vscode
+src/common/proxy.json
