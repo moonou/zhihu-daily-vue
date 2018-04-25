@@ -42,7 +42,7 @@ export default {
     }
   },
   mounted () {
-    particlesJS.load('points', '/static/points.json', () => {
+    particlesJS.load('points', './static/points.json', () => {
     })
   },
   methods: {
