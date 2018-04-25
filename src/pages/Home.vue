@@ -76,7 +76,7 @@ export default {
     height: 100%;
     z-index: 1;
     .list {
-      @include column(1/3)
+      @include column(1/3);
       height: 70%;
       margin-top: 100px;
       .artcles {

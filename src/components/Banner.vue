@@ -3,7 +3,12 @@
     <div class="content">
       <div v-if="news[0]">
         <transition name="banner">
-          <div class="panel" v-for="(story, index) in news[0].top_stories" v-if="activeindex === index+1">
+          <div
+            class="panel"
+            v-for="(story, index) in news[0].top_stories"
+            v-if="activeindex === index+1"
+            :key="index"
+          >
             <router-link :to="{
               name: 'content',
               params: {
@@ -20,7 +25,12 @@
       </div>
       <div class="dotpanel">
         <ul class="dots" v-if="news[0]">
-          <li v-for="dotindex in news[0].top_stories.length" :class="[{active: dotindex === activeindex}]" @click=" activeindex = dotindex"></li>
+          <li
+            v-for="dotindex in news[0].top_stories.length"
+            :class="[{active: dotindex === activeindex}]"
+            @click=" activeindex = dotindex"
+            :key="dotindex"
+          ></li>
         </ul>
       </div>
     </div>
